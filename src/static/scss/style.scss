@@ -1,0 +1,54 @@
+:root{
+  body.dark{
+    --main-txt: #EEEEFF;
+    --light-txt: #486078;
+    --main-bg: #02121E;
+    --munu-txt: #7D99B5;  
+    --border: #061E30;
+    --light-letter: #041E31;
+    --dark-letter: #000E17;
+    --fig-clr: #182835;
+  }
+  body.light{
+    --main-txt: #02121E;
+    --light-txt: #182835;
+    --main-bg: #EEEEFF;
+    --munu-txt: #182835;
+    --border: #C2D1E0;
+    --light-letter: #F9F9FF;
+    --dark-letter: rgba(2, 18, 30, .05);
+    --fig-clr: #C3DCF0;
+  }
+}
+
+//библиотеки и плагины
+@import "vendors.scss";
+
+//шрифты
+@import "fonts.scss";
+
+//переменный и миксины
+@import "_vars.scss";
+@import "_mix.scss";
+
+//базовые глобальные стили
+@import "basic.scss";
+
+//страницы
+
+//глобальные модули
+@import "intro.scss";
+
+//модули
+@import "header.scss";
+@import "main-sec.scss";
+@import "services.scss";
+@import "case.scss";
+@import "step.scss";
+@import "activitys.scss";
+@import "strategy.scss";
+@import "blogs-sec.scss";
+@import "blog-item.scss";
+@import "finish-txt.scss";
+@import "finish-fig.scss";
+@import "popup.scss";

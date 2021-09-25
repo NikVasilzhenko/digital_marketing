@@ -1,0 +1,111 @@
+.activitys{
+  height: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+  border-bottom: 1px solid var(--light-txt);
+  &__wrap{
+    width: 100%;
+    margin-top: 6rem;
+    border-top: 1px solid var(--light-txt);
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  &__txt{
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 150%;
+  }
+  &__grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 4.6rem;
+    grid-row-gap: 4.6rem; 
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    &-icn{
+      height: 3rem;
+      margin-bottom: 1rem;
+      svg{height: 100%;}
+    }
+    &-txt{
+      font-size: 1rem;
+      line-height: 120%;
+      text-align: center;
+    }
+    &::before,
+    &::after{
+      content: '';
+      display: block;
+      background: url(../img/svg/plus.svg) center center no-repeat;
+      background-size: contain;
+      width: .7rem;
+      height: .7rem;
+      position: absolute;
+    }
+    &:nth-child(1){
+      padding-bottom: 5rem;
+      &::before{display: none;}
+      &::after{bottom: 0; right: 0;}
+    }
+    &:nth-child(2),
+    &:nth-child(3){
+      padding-bottom: 5rem;
+      &::before{bottom: 0; left: 0;}
+      &::after{bottom: 0; right: 0;}
+    }
+    &:nth-child(4){
+      padding-bottom: 5rem;
+      &::after{display: none;}
+      &::before{bottom: 0; left: 0;}
+    }
+    &:nth-child(5){
+      padding-top: 5rem;
+      &::before{display: none;}
+      &::after{top: 0; right: 0;}
+    }
+    &:nth-child(6),
+    &:nth-child(7){
+      padding-top: 5rem;
+      &::before{top: 0; left: 0;}
+      &::after{top: 0; right: 0;}
+    }
+    &:nth-child(8){
+      padding-top: 5rem;
+      &::after{display: none;}
+      &::before{top: 0; left: 0;}
+    }
+  }
+}
+
+@media only screen and (max-width : 767px){
+  .activitys{
+    display: block;
+    &__wrap{
+      margin-top: 4rem;
+      display: block;
+    }
+    &__txt{font-size: 1.4rem;}
+    &__grid{
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2.4rem;
+      grid-row-gap: 4rem; 
+      padding: 3rem 0;
+    }
+    &__item{
+      padding: 0 !important;
+      &-txt{font-size: 1.2rem;}
+      &::before,
+      &::after{display: none;}
+    }
+  }
+}

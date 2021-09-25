@@ -1,0 +1,69 @@
+.finish-fig{
+  position: fixed;
+  top: 150vh;
+  left: 50%;
+  width: 20.8rem;
+  height: 30rem;
+  margin: -10rem 0 0 -10.4rem;
+  z-index: 2;
+  transition: top $trs, left $trs, opacity $trs;
+  opacity: 0;
+  &__hand{
+    position: relative;
+    z-index: 3;
+  }
+  &__pluses{
+    position: absolute;
+    z-index: 2;
+    top: 2.5rem;
+    left: 50%;
+    width: 20.9rem;
+    max-width: unset;
+    margin-left: -10.45rem;
+  }
+  &__polygon{
+    position: absolute;
+    z-index: 2;
+    top: -12.6rem;
+    left: 0;
+    width: 43.2rem;
+    max-width: unset;
+  }
+}
+.fp-viewing-finish .finish-fig{
+  top: 50vh;
+  opacity: 1;
+}
+.menu-opened .finish-fig{
+  top: 150vh;
+  opacity: 0;
+}
+
+.popup-1-open:not(.menu-opened),
+.popup-2-open:not(.menu-opened){
+  .finish-fig{
+    top: 50vh;
+    left: 20%;
+    opacity: 1;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width : 768px){
+  .fp-viewing-finish .finish-fig{top: 45vh;}
+  .popup-1-open:not(.menu-opened),
+  .popup-2-open:not(.menu-opened){
+    .finish-fig{
+      top: 20vh;
+      left: 60%;
+    }
+  }
+}
+@media only screen and (max-width : 767px){
+  .finish-fig{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 3rem auto 6rem;
+    opacity: 1;
+  }
+}
